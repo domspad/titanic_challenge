@@ -5,9 +5,9 @@ clear ; close all; clc
 %% Load Data
 %  The first two columns contains the exam scores and the third column
 %  contains the label
-data = load('train1.txt');
-Xtrain = data(1:691, 1:9); ytrain = data(1:691, 10);
-Xcv = data(692:end,1:9); ycv = data(692:end,10);
+data = load('train2.txt');
+Xtrain = data(1:691, 1:55); ytrain = data(1:691, 56);
+Xcv = data(692:end,1:55); ycv = data(692:end,56);
 
 %% ============ Part 2: Compute Cost and Gradient ============
 
