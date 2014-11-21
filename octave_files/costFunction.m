@@ -21,6 +21,10 @@ grad = zeros(size(theta));
 %
 
 hX = sigmoid(X * theta);
+
+%For values between 0.99999 and 1 octave sees as 1 :(
+hX = hX - ((hX == 1) * 0.00001);
+
 J = -(1/m) * (y' * log(hX) + (1 - y)' * log(1 - hX));
 grad = (1/m) * X' * (hX - y);
 

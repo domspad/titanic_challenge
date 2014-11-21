@@ -52,3 +52,25 @@ fprintf('Train cost %f\n', costFunction(theta, Xtrain, ytrain));;
 pcv = predict(theta, Xcv);
 fprintf('CV Accuracy: %f\n', mean(double(pcv == ycv)) * 100);
 fprintf('CV cost %f\n', costFunction(theta, Xcv, ycv));
+
+fprintf('Program paused. Press enter to continue.\n');
+pause;
+
+%% ============= Part 5: plotting Learning Curve ==============
+
+[error_train, error_cv] = learningCurve(Xtrain, ytrain, Xcv, ycv);
+
+plot(1:m, error_train, 1:m, error_cv);
+title('Learning curve for logistic regression')
+legend('Train', 'Cross Validation')
+xlabel('Number of training examples')
+ylabel('Error')
+% axis([0 13 0 150])
+
+fprintf('# Training Examples\tTrain Error\tCross Validation Error\n');
+for i = 1:m
+    fprintf('  \t%d\t\t%f\t%f\n', i, error_train(i), error_cv(i));
+end
+
+
+

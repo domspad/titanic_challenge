@@ -1,0 +1,10 @@
+function [theta] = trainLogReg(X,y,lambda)
+	%returns the optimized parameter 'theta' for logistic regression
+
+initial_theta = zeros(size(X,2),1);
+
+options = optimset('GradObj', 'on', 'MaxIter', 400);
+
+theta = fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
+
+end
