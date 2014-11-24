@@ -5,9 +5,9 @@ clear ; close all; clc
 %% Load Data
 %  The first two columns contains the exam scores and the third column
 %  contains the label
-data = load('train2.txt');
-Xtrain = data(1:691, 1:55); ytrain = data(1:691, 56);
-Xcv = data(692:end,1:55); ycv = data(692:end,56);
+data = load('train1.txt');
+Xtrain = data(1:691, 1:9); ytrain = data(1:691, 10);
+Xcv = data(692:end,1:9); ycv = data(692:end,10);
 
 %% ============ Part 2: Compute Cost and Gradient ============
 
@@ -60,7 +60,7 @@ pause;
 
 [error_train, error_cv] = learningCurve(Xtrain, ytrain, Xcv, ycv);
 
-plot(1:m, error_train, 1:m, error_cv);
+plot(1:30:m, error_train, 1:30:m, error_cv);
 title('Learning curve for logistic regression')
 legend('Train', 'Cross Validation')
 xlabel('Number of training examples')
@@ -68,7 +68,7 @@ ylabel('Error')
 % axis([0 13 0 150])
 
 fprintf('# Training Examples\tTrain Error\tCross Validation Error\n');
-for i = 1:m
+for i = 1:30:m
     fprintf('  \t%d\t\t%f\t%f\n', i, error_train(i), error_cv(i));
 end
 

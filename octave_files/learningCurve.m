@@ -3,16 +3,18 @@ function [error_train, error_cv] = learningCurve(X, y, Xcv, ycv)
 	% as the y-vals of a learning curve) 
 
 m = size(X, 1); % number of train examples
+step = 30;
+num = ceil(m/step);
 
-error_train = zeros(m, 1);
-error_cv = zeros(m, 1);
+error_train = zeros(num, 1);
+error_cv = zeros(num, 1);
 
-for i=1:m 
+for i=1:num
 	%train the model
-	theta = trainLogReg(X(1:i,:), y(1:i,:), 0);
+	theta = trainLogReg(X(1:(i-1)*step+1,:), y(1:(i-1)*step+1,:), 0);
 
 	%calculate and save the errors
-	error_train(i) = costFunction(theta, X(1:i,:), y(1:i,:));
+	error_train(i) = costFunction(theta, X(1:(i-1)*step+1,:), y(1:(i-1)*step+1,:));
 	error_cv(i) = costFunction(theta, Xcv, ycv);
 
 	%FOR RETURNING ACCURACIES...
