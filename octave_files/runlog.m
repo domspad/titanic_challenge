@@ -5,9 +5,11 @@ clear ; close all; clc
 %% Load Data
 %  The first two columns contains the exam scores and the third column
 %  contains the label
-data = load('train1.txt');
-Xtrain = data(1:691, 1:9); ytrain = data(1:691, 10);
-Xcv = data(692:end,1:9); ycv = data(692:end,10);
+data = load('train2.txt');
+Xtrain = data(1:691, 1:55); ytrain = data(1:691, 56);
+Xcv = data(692:end,1:55); ycv = data(692:end,56);
+lambda = 0;
+step = 30; %for learning curve plot
 
 %% ============ Part 2: Compute Cost and Gradient ============
 
@@ -22,7 +24,7 @@ Xcv = [ones(size(Xcv,1),1) Xcv];
 initial_theta = zeros(n + 1, 1);
 
 % Compute and display initial cost and gradient
-[cost, grad] = costFunction(initial_theta, Xtrain, ytrain);
+[cost, grad] = costFunction(initial_theta, Xtrain, ytrain, lambda);
 
 fprintf('Cost at initial theta (zeros): %f\n', cost);
 fprintf('Gradient at initial theta (zeros): \n');
@@ -35,7 +37,7 @@ fprintf(' %f \n', grad);
 options = optimset('GradObj', 'on', 'MaxIter', 400);
 
 [theta, cost] = ...
-	fminunc(@(t)(costFunction(t, Xtrain, ytrain)), initial_theta, options);
+	fminunc(@(t)(costFunction(t, Xtrain, ytrain, lambda)), initial_theta, options);
 
 fprintf('Cost at theta found by fminunc: %f\n', cost);
 fprintf('theta: \n');
@@ -46,21 +48,21 @@ fprintf(' %f \n', theta);
 % Compute accuracy on our training set
 ptrain = predict(theta, Xtrain);
 fprintf('Train Accuracy: %f\n', mean(double(ptrain == ytrain)) * 100);
-fprintf('Train cost %f\n', costFunction(theta, Xtrain, ytrain));;
+fprintf('Train cost %f\n', costFunction(theta, Xtrain, ytrain, 0));;
 
 
 pcv = predict(theta, Xcv);
 fprintf('CV Accuracy: %f\n', mean(double(pcv == ycv)) * 100);
-fprintf('CV cost %f\n', costFunction(theta, Xcv, ycv));
+fprintf('CV cost %f\n', costFunction(theta, Xcv, ycv, 0));
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 %% ============= Part 5: plotting Learning Curve ==============
 
-[error_train, error_cv] = learningCurve(Xtrain, ytrain, Xcv, ycv);
+[error_train, error_cv, steps] = learningCurveAcc(Xtrain, ytrain, Xcv, ycv, lambda, step);
 
-plot(1:30:m, error_train, 1:30:m, error_cv);
+plot(steps, error_train, steps, error_cv);
 title('Learning curve for logistic regression')
 legend('Train', 'Cross Validation')
 xlabel('Number of training examples')
@@ -68,8 +70,8 @@ ylabel('Error')
 % axis([0 13 0 150])
 
 fprintf('# Training Examples\tTrain Error\tCross Validation Error\n');
-for i = 1:30:m
-    fprintf('  \t%d\t\t%f\t%f\n', i, error_train(i), error_cv(i));
+for i = 1:length(error_train)
+    fprintf('  \t%d\t\t%f\t%f\n', i*step, error_train(i), error_cv(i));
 end
 
 

@@ -1,5 +1,5 @@
 function [error_train, error_cv, steps] = learningCurve(X, y, Xcv, ycv, lambda, step)
-	% Returns the error vectors for the training set and the CV set (to be plotted
+	% Returns the accuracy error vectors for the training set and the CV set (to be plotted
 	% as the y-vals of a learning curve) 
 
 m = size(X, 1); % number of train examples
@@ -18,7 +18,9 @@ for i=1:length(steps)
 	theta = trainLogReg(X(1:steps(i),:), y(1:steps(i),:), lambda);
 
 	%calculate and save the errors
-	error_train(i) = costFunction(theta, X(1:steps(i),:), y(1:steps(i),:), 0);
-	error_cv(i) = costFunction(theta, Xcv, ycv, 0);
+	preds = predict(theta, X(1:steps(i),:));
+	error_train(i) = mean(double(preds ~= y(1:steps(i),:)));
+	preds_cv = predict(theta, Xcv);
+	error_cv(i) = mean(double(preds_cv ~= ycv));
 	end
 end
