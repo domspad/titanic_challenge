@@ -182,3 +182,33 @@
 2014-11-26 20:19:57.109 [NotebookApp] Connecting to: tcp://127.0.0.1:51450
 2014-11-26 20:19:57.137 [NotebookApp] Connecting to: tcp://127.0.0.1:51451
 2014-11-26 20:19:57.143 [NotebookApp] Connecting to: tcp://127.0.0.1:51452
+2014-12-03 14:45:55.295 [NotebookApp] CRITICAL | received signal 15, stopping
+2014-12-03 14:45:55.304 [NotebookApp] CRITICAL | received signal 15, stopping
+2014-12-03 14:45:55.358 [NotebookApp] Shutting down kernels
+2014-12-03 14:45:55.363 [NotebookApp] Shutting down kernels
+2014-12-03 14:45:55.383 [NotebookApp] Kernel shutdown: 9de4bb08-cde4-4c3b-8e1d-5fe74a6b266c
+2014-12-03 14:45:55.385 [NotebookApp] Kernel shutdown: c998c8d3-c918-4530-b0ac-4d35f0ba8261
+2014-12-03 14:45:55.386 [NotebookApp] Kernel shutdown: d716350b-d722-49d0-9928-e25c0257190c
+2014-12-03 14:45:55.387 [NotebookApp] Kernel shutdown: e60042dd-b6bd-4e9a-ac89-d093ecbf14c2
+2014-12-03 14:45:55.390 [NotebookApp] Kernel shutdown: ab32c9d3-b711-456d-944d-a8ef6854f593
+2014-12-04 09:15:04.187 [NotebookApp] Using existing profile dir: u'/Users/dominicspadacene/.ipython/profile_default'
+2014-12-04 09:15:04.197 [NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+2014-12-04 09:15:04.215 [NotebookApp] Serving notebooks from local directory: /Users/dominicspadacene/Desktop/coursera_ml/titanic_challenge/ipynbs
+2014-12-04 09:15:04.215 [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
+2014-12-04 09:15:04.215 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+2014-12-04 09:15:09.242 [NotebookApp] Connecting to: tcp://127.0.0.1:50240
+2014-12-04 09:15:09.255 [NotebookApp] Kernel started: 8493de9f-a684-45cd-958a-095a5f88dc1c
+2014-12-04 09:15:09.319 [NotebookApp] Connecting to: tcp://127.0.0.1:50239
+2014-12-04 09:15:09.325 [NotebookApp] Connecting to: tcp://127.0.0.1:50237
+2014-12-04 09:15:09.332 [NotebookApp] Connecting to: tcp://127.0.0.1:50238
+2014-12-04 09:15:14.414 [NotebookApp] Connecting to: tcp://127.0.0.1:50261
+2014-12-04 09:15:14.414 [NotebookApp] Kernel started: d26d7650-89d6-4cea-a0f2-86e484ae3085
+2014-12-04 09:15:14.485 [NotebookApp] Connecting to: tcp://127.0.0.1:50258
+2014-12-04 09:15:14.486 [NotebookApp] Connecting to: tcp://127.0.0.1:50259
+2014-12-04 09:15:14.573 [NotebookApp] Connecting to: tcp://127.0.0.1:50260
+2014-12-04 09:15:20.809 [NotebookApp] Kernel shutdown: 8493de9f-a684-45cd-958a-095a5f88dc1c
+2014-12-04 09:35:32.372 [NotebookApp] Connecting to: tcp://127.0.0.1:56845
+2014-12-04 09:35:32.373 [NotebookApp] Kernel started: 337580ce-1a4d-4e66-8662-44fdc30d8fa7
+2014-12-04 09:35:32.476 [NotebookApp] Connecting to: tcp://127.0.0.1:56844
+2014-12-04 09:35:32.483 [NotebookApp] Connecting to: tcp://127.0.0.1:56842
+2014-12-04 09:35:32.486 [NotebookApp] Connecting to: tcp://127.0.0.1:56843
