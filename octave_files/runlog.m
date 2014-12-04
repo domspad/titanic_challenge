@@ -5,9 +5,9 @@ clear ; close all; clc
 %% Load Data
 %  The first two columns contains the exam scores and the third column
 %  contains the label
-data = load('train2.txt');
-Xtrain = data(1:691, 1:55); ytrain = data(1:691, 56);
-Xcv = data(692:end,1:55); ycv = data(692:end,56);
+data = load('train3.txt');
+Xtrain = data(1:691, 1:38); ytrain = data(1:691, 39);
+Xcv = data(692:end,1:38); ycv = data(692:end,39);
 lambda = 0;
 step = 30; %for learning curve plot
 
