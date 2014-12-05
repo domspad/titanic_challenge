@@ -1,0 +1,53 @@
+submission_1:
+
+	idea:		minimal feature processing with simple logistic regression
+
+	train data: 	train1.txt
+	model:		runlog.m (logistic regression)
+			Xtrain = data(1:691, 1:9)
+			ytrain = data(1:691, 10)
+			Xcv = data(692:end, 1:9)
+			ycv = data(692:end, 10)
+
+	train cost:	0.459512
+	train acc:	78.292330
+	cv cost:	0.425538
+	cv acc:		81.5
+
+	test (kaggle):
+
+submission_2:
+	
+	concept:	Because of evidence of underfitting from learning curve, generated  polynomial features up to degree 3 of some of the features (more complex than the binary features). Then ran unregularized logistic regression on feature set
+
+	train data: 	train2.txt
+	model:		runlog.m (logistic regression)
+			Xtrain = data(1:691, 1:55)
+			ytrain = data(1:691, 56)
+			Xcv = data(692:end, 1:55)
+			ycv = data(692:end, 56)
+
+	train cost:	0.377239
+	train acc:	84.659913
+	cv cost:	0.349290
+	cv acc:		86.50000
+
+	test (kaggle):
+
+submission_3:
+	
+	concept: 	To get back to data workflow process I learned in course, I generated more thoughtful features based on error analysis of the first submission (i.e. the cv set misclassified examples). Then ran unregularized logistic regression. 
+
+	train data: 	train3.txt
+	model:		runlog.m (logistic regression)
+			Xtrain = data(1:691, 1:38)
+			ytrain = data(1:691, 39)
+			Xcv = data(692:end, 1:38)
+			ycv = data(692:end, 39)
+
+	train cost:	0.405152
+	train acc:	84.225760
+	cv cost:	0.343708
+	cv acc:		87.500000
+
+	test (kaggle):
