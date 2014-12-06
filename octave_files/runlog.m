@@ -6,10 +6,14 @@ clear ; close all; clc
 %  The first two columns contains the exam scores and the third column
 %  contains the label
 data = load('train3.txt');
+Xtest = [ones(418,1), load('test3.txt')];
 Xtrain = data(1:691, 1:38); ytrain = data(1:691, 39);
 Xcv = data(692:end,1:38); ycv = data(692:end,39);
 lambda = 0;
 step = 30; %for learning curve plot
+
+testoutfile = '../predictions/test_pred3.csv';
+trainoutfile = '../predictions/train_pred3.csv';
 
 %% ============ Part 2: Compute Cost and Gradient ============
 
@@ -50,13 +54,19 @@ ptrain = predict(theta, Xtrain);
 fprintf('Train Accuracy: %f\n', mean(double(ptrain == ytrain)) * 100);
 fprintf('Train cost %f\n', costFunction(theta, Xtrain, ytrain, 0));;
 
-
 pcv = predict(theta, Xcv);
 fprintf('CV Accuracy: %f\n', mean(double(pcv == ycv)) * 100);
 fprintf('CV cost %f\n', costFunction(theta, Xcv, ycv, 0));
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+fprintf('Writing out training and cv predictions\n');
+writeSub([ptrain;pcv], trainoutfile, true);
+fprintf('Writing out test predictions\n');
+ptest = predict(theta, Xtest);
+writeSub(ptest, testoutfile);
+
 
 %% ============= Part 5: plotting Learning Curve ==============
 
