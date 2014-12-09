@@ -241,3 +241,34 @@
 2014-12-05 12:53:15.868 [NotebookApp] Connecting to: tcp://127.0.0.1:60147
 2014-12-05 12:53:15.873 [NotebookApp] Connecting to: tcp://127.0.0.1:60146
 2014-12-05 12:53:15.876 [NotebookApp] Connecting to: tcp://127.0.0.1:60145
+2014-12-05 13:36:04.892 [NotebookApp] Using existing profile dir: u'/Users/dominicspadacene/.ipython/profile_default'
+2014-12-05 13:36:04.896 [NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+2014-12-05 13:36:04.913 [NotebookApp] The port 8888 is already in use, trying another random port.
+2014-12-05 13:36:04.914 [NotebookApp] Serving notebooks from local directory: /Users/dominicspadacene/Desktop/coursera_ml/titanic_challenge/ipynbs
+2014-12-05 13:36:04.914 [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8889/
+2014-12-05 13:36:04.914 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+2014-12-05 13:36:13.148 [NotebookApp] Connecting to: tcp://127.0.0.1:60398
+2014-12-05 13:36:13.152 [NotebookApp] Kernel started: da91566d-3488-408e-969f-3bd75e34294c
+2014-12-05 13:36:13.208 [NotebookApp] Connecting to: tcp://127.0.0.1:60395
+2014-12-05 13:36:13.304 [NotebookApp] Connecting to: tcp://127.0.0.1:60397
+2014-12-05 13:36:13.485 [NotebookApp] Connecting to: tcp://127.0.0.1:60396
+2014-12-07 06:35:22.040 [NotebookApp] CRITICAL | received signal 15, stopping
+2014-12-07 06:35:22.041 [NotebookApp] CRITICAL | received signal 15, stopping
+2014-12-07 06:35:22.071 [NotebookApp] Shutting down kernels
+2014-12-07 06:35:22.071 [NotebookApp] Shutting down kernels
+2014-12-07 06:35:22.106 [NotebookApp] CRITICAL | received signal 15, stopping
+2014-12-07 06:35:22.106 [NotebookApp] CRITICAL | received signal 15, stopping
+2014-12-07 06:35:22.107 [NotebookApp] Kernel shutdown: 40a588e8-a148-42d3-b598-dbf346f03575
+2014-12-07 06:35:22.107 [NotebookApp] Kernel shutdown: da91566d-3488-408e-969f-3bd75e34294c
+2014-12-07 06:35:22.108 [NotebookApp] Kernel shutdown: bab6123d-20a8-4140-bdda-6e26c40ffcec
+2014-12-07 06:35:22.109 [NotebookApp] Kernel shutdown: d3670af3-0cba-47ad-9abf-b37430df30c0
+2014-12-09 09:27:51.654 [NotebookApp] Using existing profile dir: u'/Users/dominicspadacene/.ipython/profile_default'
+2014-12-09 09:27:51.667 [NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+2014-12-09 09:27:51.686 [NotebookApp] Serving notebooks from local directory: /Users/dominicspadacene/Desktop/coursera_ml/titanic_challenge/ipynbs
+2014-12-09 09:27:51.686 [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
+2014-12-09 09:27:51.686 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+2014-12-09 09:27:56.667 [NotebookApp] Connecting to: tcp://127.0.0.1:49192
+2014-12-09 09:27:56.688 [NotebookApp] Kernel started: 37d572ee-c1cc-4e2f-b06b-491af630307f
+2014-12-09 09:27:56.714 [NotebookApp] Connecting to: tcp://127.0.0.1:49190
+2014-12-09 09:27:56.715 [NotebookApp] Connecting to: tcp://127.0.0.1:49191
+2014-12-09 09:27:56.761 [NotebookApp] Connecting to: tcp://127.0.0.1:49189
