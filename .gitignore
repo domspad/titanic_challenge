@@ -1,6 +1,7 @@
 # Logs
 ###############
 *-checkpoint.ipynb
-nohup.out
-octave-core
+ipynbs/nohup.out
+octave_files/octave-core
 testrmcached
+*.DS_Store
