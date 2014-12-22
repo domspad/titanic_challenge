@@ -5,3 +5,8 @@ ipynbs/nohup.out
 octave_files/octave-core
 testrmcached
 *.DS_Store
+
+#dat repo
+###############
+*.dat
+*dat.json
