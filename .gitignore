@@ -1,12 +1,13 @@
 # Logs
 ###############
-*-checkpoint.ipynb
 ipynbs/nohup.out
 octave_files/octave-core
 testrmcached
 *.DS_Store
+data/titanic_all.xlsx
+ipynbs/.ipynb_checkpoints/*
 
 #dat repo
 ###############
 *.dat
-*dat.json
+data/dat.json

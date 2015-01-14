@@ -12,8 +12,8 @@ Xcv = data(692:end,1:38); ycv = data(692:end,39);
 lambda = 0;
 step = 30; %for learning curve plot
 
-testoutfile = '../predictions/test_pred3.csv';
-trainoutfile = '../predictions/train_pred3.csv';
+%testoutfile = '../predictions/test_pred3.csv';
+%trainoutfile = '../predictions/train_pred3.csv';
 
 %% ============ Part 2: Compute Cost and Gradient ============
 
@@ -61,11 +61,11 @@ fprintf('CV cost %f\n', costFunction(theta, Xcv, ycv, 0));
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
-fprintf('Writing out training and cv predictions\n');
-writeSub([ptrain;pcv], trainoutfile, true);
-fprintf('Writing out test predictions\n');
+%fprintf('Writing out training and cv predictions\n');
+%writeSub([ptrain;pcv], trainoutfile, true);
+%fprintf('Writing out test predictions\n');
 ptest = predict(theta, Xtest);
-writeSub(ptest, testoutfile);
+%writeSub(ptest, testoutfile);
 
 
 %% ============= Part 5: plotting Learning Curve ==============
