@@ -5,10 +5,12 @@ clear ; close all; clc
 %% Load Data
 %  The first two columns contains the exam scores and the third column
 %  contains the label
-data = load('train3.txt');
-Xtest = [ones(418,1), load('test3.txt')];
-Xtrain = data(1:691, 1:38); ytrain = data(1:691, 39);
-Xcv = data(692:end,1:38); ycv = data(692:end,39);
+traindata = load('../data/train3.csv');
+cvdata = load('../data/cv3.csv');
+testdata = load('../data/test3.csv');
+Xtrain = traindata(1:end, 1:29); ytrain = traindata(1:end, 30);
+Xcv = cvdata(1:end,1:29); ycv = cvdata(1:end,30);
+Xtest = testdata(1:end,1:29); ytest = testdata(1:end,30);
 lambda = 0;
 step = 30; %for learning curve plot
 
@@ -23,6 +25,7 @@ step = 30; %for learning curve plot
 % Add intercept term to x and X_test
 Xtrain = [ones(m, 1) Xtrain];
 Xcv = [ones(size(Xcv,1),1) Xcv];
+Xtest = [ones(size(Xtest,1),1) Xtest];
 
 % Initialize fitting parameters
 initial_theta = zeros(n + 1, 1);
@@ -57,6 +60,10 @@ fprintf('Train cost %f\n', costFunction(theta, Xtrain, ytrain, 0));;
 pcv = predict(theta, Xcv);
 fprintf('CV Accuracy: %f\n', mean(double(pcv == ycv)) * 100);
 fprintf('CV cost %f\n', costFunction(theta, Xcv, ycv, 0));
+
+ptest = predict(theta, Xtest);
+fprintf('Test Accuracy: %f\n', mean(double(ptest == ytest)) * 100);
+fprintf('Test cost %f\n', costFunction(theta, Xtest, ytest, 0));
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
