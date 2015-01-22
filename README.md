@@ -30,3 +30,7 @@ In terms of prediction accuracy
 | alldead |   61.3    |  62.5  |   62.5   |
 | model1  |   78.0    |  80.0  |   77.0   |
 | model2  |   82.5    |  85.5  |  78.8    |
+
+Both models used logistic regression, model1 has minimal preprocessing done to the data (total of 9 features), while for model2 I analyzed the errors model1 made on the CV dataset and tried to add additional features that would be helpful in identifying those cases. 
+
+As a result, the CV set saw the most gains in prediction accuracy, which is not surprising considering the features were selected based on errors originally made on that set, however, the test set surprisingly didn't see much improvement from the additional 20 features. I think this may be do to now there being too many features, and thus overfitting the training set.
