@@ -2,7 +2,7 @@
 ##The data analysis cycle
 =================
 
-This repository is a practice of the steps one should take when applying any machine learning model to a prediction problem. They are taken from Andrew Ng's Coursera Machine Learning course.
+This repository is a practice of the steps one should take when applying any machine learning model to a prediction problem. They are taken from Andrew Ng's Coursera Machine Learning course. Also, it is a practice in implementing logistic regularized logistic regression, rather than using one say from sci-kit learn.
 
 ###The Problem
 
@@ -23,8 +23,10 @@ Predicting whether a passenger of the Titanic survived based on basic demographi
 
 ###Results
 
+In terms of prediction accuracy
+
 |         | train | CV | test |
 |---------|-------|----|------|
-| alldead |       |    |      |
-| model1  |       |    |      |
-| model2  |       |    |      |
+| alldead |   61.3    |  62.5  |   62.5   |
+| model1  |   78.0    |  80.0  |   77.0   |
+| model2  |   82.5    |  85.5  |  78.8    |
